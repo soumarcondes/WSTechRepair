@@ -69,6 +69,35 @@
     .gallery img:hover {
       transform: scale(1.05);
     }
+    .carousel {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      gap: 1rem;
+      padding-bottom: 1rem;
+    }
+    .carousel::-webkit-scrollbar {
+      display: none;
+    }
+    .testimonial {
+      flex: 0 0 80%;
+      background-color: #1c1f2d;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,255,224,0.1);
+      scroll-snap-align: start;
+    }
+    .testimonial p {
+      font-style: italic;
+      font-size: 1.1rem;
+    }
+    .testimonial .author {
+      text-align: right;
+      font-weight: bold;
+      margin-top: 1rem;
+      color: #00ffe0;
+    }
     .about, .contact {
       text-align: center;
     }
@@ -110,10 +139,11 @@
     <a href="#sobre">Sobre</a>
     <a href="#servicos">Serviços</a>
     <a href="#galeria">Galeria</a>
+    <a href="#relatos">Relatos</a>
     <a href="#contato">Contato</a>
   </nav>  <section id="sobre" class="about">
     <h2>Sobre Nós</h2>
-    <p>Atendemos Curitiba e região metropolitana recebendo computadores em casa ou fazendo visita técnica. Trabalhamos com montagem, upgrades, redes, formatação e limpeza profissional. Soluções reais para quem precisa de rapidez e segurança.</p>
+    <p>Atendemos Curitiba e Região Metropolitana. Trabalhamos com montagem, upgrades, redes, formatação e limpeza profissional. Soluções reais para quem precisa de rapidez e segurança.</p>
   </section>  <section id="servicos">
     <h2>Serviços</h2>
     <ul>
@@ -125,10 +155,31 @@
       <li>Instalação de impressoras e pontos de rede</li>
     </ul>
   </section>  <section id="galeria">
+    <h2>Galeria de Exemplos</h2>
     <div class="gallery">
       <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7" alt="PC Gamer" />
       <img src="https://images.unsplash.com/photo-1627398242454-46c282d0b28c" alt="Hardware" />
       <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" alt="Software" />
+    </div>
+  </section>  <section id="relatos">
+    <h2>Relatos de Clientes</h2>
+    <div class="carousel">
+      <div class="testimonial">
+        <p>"Fui super bem atendida! Meu notebook estava super lento, e em menos de um dia ele voltou como novo. Recomendo demais!"</p>
+        <div class="author">— Camila F., Pinhais</div>
+      </div>
+      <div class="testimonial">
+        <p>"Montei meu primeiro PC gamer com o WS TechRepair. O atendimento foi ótimo, preço justo e tudo funcionando perfeitamente!"</p>
+        <div class="author">— João V., Curitiba</div>
+      </div>
+      <div class="testimonial">
+        <p>"Achei muito profissional, tiraram todas as dúvidas e resolveram meu problema de rede em casa rapidinho. Muito obrigado!"</p>
+        <div class="author">— Fernanda L., São José dos Pinhais</div>
+      </div>
+      <div class="testimonial">
+        <p>"Meu computador não ligava, levei até eles e descobriram que era a fonte. Fizeram a troca no mesmo dia. Atendimento top!"</p>
+        <div class="author">— Rodrigo M., Colombo</div>
+      </div>
     </div>
   </section>  <section id="contato" class="contact">
     <h2>Contato</h2>
