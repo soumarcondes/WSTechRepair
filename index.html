@@ -7,14 +7,16 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #0a0f1c;
-      color: #f0f0f0;
+      background-color: #0c0f1a;
+      color: #e0e0e0;
+      overflow-x: hidden;
     }
     header {
-      background: linear-gradient(90deg, #0ff, #0af);
-      color: #000;
+      background: linear-gradient(90deg, #2e2e3a, #1a1f2f);
+      color: #00ffe0;
       padding: 2rem 1rem;
       text-align: center;
+      animation: fadeIn 2s ease-in-out;
     }
     header h1 {
       margin: 0;
@@ -24,31 +26,48 @@
     nav {
       text-align: center;
       padding: 1rem;
+      background-color: #111420;
     }
     nav a {
-      color: #0ff;
+      color: #00ffe0;
       margin: 0 15px;
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #ffffff;
     }
     section {
       padding: 2rem 1rem;
       max-width: 1000px;
       margin: auto;
+      animation: fadeInUp 1s ease-in-out;
     }
     section h2 {
-      color: #0ff;
+      color: #00ffe0;
+      border-bottom: 1px solid #333;
+      padding-bottom: 5px;
+    }
+    ul li {
+      margin: 8px 0;
     }
     .gallery {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 15px;
       justify-content: center;
+      margin-top: 20px;
     }
     .gallery img {
       max-width: 300px;
       border-radius: 10px;
-      border: 2px solid #0ff;
+      border: 2px solid #00ffe0;
+      box-shadow: 0 0 10px rgba(0,255,224,0.3);
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
     }
     .about, .contact {
       text-align: center;
@@ -62,12 +81,23 @@
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    .whatsapp-link:hover {
+      background-color: #1ebc5c;
     }
     footer {
       text-align: center;
       padding: 1rem;
       color: #888;
       font-size: 0.9rem;
+      background-color: #111420;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;} to {opacity: 1;}
+    }
+    @keyframes fadeInUp {
+      from {opacity: 0; transform: translateY(20px);} to {opacity: 1; transform: translateY(0);}
     }
   </style>
 </head>
@@ -97,9 +127,9 @@
   </section>  <section id="galeria">
     <h2>Galeria de Exemplos</h2>
     <div class="gallery">
-      <img src="https://source.unsplash.com/featured/?pc,gaming" alt="PC Gamer" />
-      <img src="https://source.unsplash.com/featured/?hardware" alt="Hardware" />
-      <img src="https://source.unsplash.com/featured/?software,tech" alt="Software" />
+      <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7" alt="PC Gamer" />
+      <img src="https://images.unsplash.com/photo-1627398242454-46c282d0b28c" alt="Hardware" />
+      <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" alt="Software" />
     </div>
   </section>  <section id="contato" class="contact">
     <h2>Contato</h2>
